@@ -47,7 +47,7 @@ class CephTests extends FreeSpec with Matchers with ScalaFutures {
 
     // This is a workaround for situation when multiple users need to access a file (since there is no bucket policies in ceph)
     // It allows not to hardcode different user credetials but rather replicate these creds that once were set for the bucket
-    // The code works from bucket owner only:
+    // The code works from bucket owner (and file owner at the same time, which is uploader) only:
     val acl = cephClient.getBucketAcl(bucketName)
     cephClient.setObjectAcl(bucketName, key, acl)
 

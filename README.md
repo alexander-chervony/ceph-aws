@@ -6,7 +6,7 @@ CephTests contains fix for:
 
 - ```"com.amazonaws.services.s3.model.AmazonS3Exception: null (Service: Amazon S3; Status Code: 400; Error Code: InvalidArgument; Request ID: null), S3 Extended Request ID: null"```
 
-As well as s3 bucket policies absence workaround:
+As well as s3 bucket policies absence workaround for the scenario when it needs to share the uploaded file with other user(s):
 
 - No-hardcode way of multiple user rigts grant.
 
